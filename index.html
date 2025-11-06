@@ -8,95 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#f8fafc;--text:#0f172a;--muted:#475569;--card:#fff;--border:#e2e8f0;--radius:16px;--shadow:0 1px 2px rgba(2,6,23,.06),0 8px 24px rgba(2,6,23,.08)}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .layout{min-height:100vh;display:flex}
-
-    /* Sidebar */
-    .sidebar{display:none}
-    @media (min-width:1024px){
-      .sidebar{display:flex;flex-direction:column;width:288px;position:sticky;top:0;height:100vh;background:rgba(255,255,255,.7);backdrop-filter: blur(6px);border-right:1px solid var(--border)}
-      .side-inner{padding:24px}
-    }
-    .side-brand{display:flex;align-items:center;gap:12px;margin-bottom:24px}
-    .brand-icon{height:40px;width:40px;border-radius:14px;display:grid;place-items:center;background:#fff;box-shadow:var(--shadow)}
-    .nav{display:flex;flex-direction:column;gap:8px}
-    .nav a{padding:10px 16px;border-radius:12px}
-    .nav a:hover{background:#f1f5f9}
-    .pill{display:block;padding:10px 16px;border-radius:999px;border:1px solid var(--border);text-align:center;font-size:14px}
-    .side-footer{margin-top:auto;padding:24px;font-size:12px;color:#64748b}
-
-    /* Main */
-    .main{flex:1;overflow:auto}
-
-    /* Hero */
-    .hero{position:relative;height:75vh;display:grid;place-items:center;overflow:hidden}
-    .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-    /* Gradient between image and content */
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,.25),rgba(255,255,255,0));z-index:1}
-    .hero-inner{position:relative;z-index:2;text-align:center;color:#fff;max-width:900px;margin:auto;padding:0 24px}
-    .hero h1{font-size:clamp(32px, 6vw, 64px);line-height:1.1;margin:0;color: white;text-shadow:0 0 6px rgba(0,0,0,.6),0 0 12px rgba(0,0,0,.4)}
-    .hero p{font-size:clamp(16px, 2.5vw, 22px);margin:16px 0 0;text-shadow:0 0 4px rgba(0,0,0,.4)}
-    .cta{display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 20px;border-radius:16px;border:1px solid #0f172a;background:#0f172a;color:#fff;font-weight:600}
-    .btn.secondary{background:#f1f5f9;color:#0f172a;border-color:#e2e8f0}
-
-    /* Sections */
-    .section{max-width:1152px;margin:0 auto;padding:64px 24px}
-    .title{display:flex;align-items:center;gap:12px;margin-bottom:24px}
-    .title h2{font-size:24px;margin:0}
-    .subtitle{font-size:14px;color:#64748b;margin:0}
-    .iconbox{padding:8px;border-radius:16px;background:#fff;box-shadow:var(--shadow)}
-
-    /* Grid helpers */
-    .grid{display:grid;gap:24px}
-    .grid-2{grid-template-columns:1fr}
-    .grid-3{grid-template-columns:1fr}
-    @media (min-width:768px){
-      .grid-2{grid-template-columns:1fr 1fr}
-      .grid-3{grid-template-columns:repeat(3, 1fr)}
-    }
-
-    /* Card */
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .card-h{padding:20px;border-bottom:1px solid var(--border)}
-    .card-c{padding:20px}
-    .card-title{font-weight:600;font-size:18px;margin:0}
-    .card-desc{color:#64748b;font-size:14px;margin:6px 0 0}
-    .logo-header img{height:48px;width:auto;object-fit:contain;border-radius:6px;background:#fff;padding:4px 6px;border:1px solid var(--border);filter:grayscale(8%);box-shadow:0 2px 4px rgba(0,0,0,0.08)}
-
-    /* Logo strip inside experience cards */
-    .logo-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0 8px}
-    .logo-row img{height:48px;width:auto;object-fit:contain;border-radius:6px;background:#fff;padding:4px 6px;border:1px solid var(--border);filter:grayscale(8%);box-shadow:0 2px 4px rgba(0,0,0,0.08)}
-    .logo-row img[alt*="dark" i]{background:#0f172a}
-    
-
-    /* Badges */
-    .badges{display:flex;flex-wrap:wrap;gap:8px}
-    .badge{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;border:1px solid var(--border);background:#f8fafc;font-size:12px}
-
-    /* Lists */
-    .list{padding-left:20px;margin:0}
-    .list li{margin:8px 0}
-
-    /* Forms */
-    .input{width:100%;height:40px;padding:0 12px;border-radius:12px;border:1px solid #cbd5e1;background:#fff;font-size:14px;outline:none}
-    .input:focus{box-shadow:0 0 0 3px rgba(203,213,225,.6)}
-    .textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid #cbd5e1;background:#fff;font-size:14px;outline:none;resize:vertical}
-    .textarea:focus{box-shadow:0 0 0 3px rgba(203,213,225,.6)}
-
-    /* Simple reveals */
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-    .reveal.show{opacity:1;transform:none}
-  </style>
+  <link rel="stylesheet" href="assets\css\style.css">
 </head>
 <body>
   <div class="layout">
+
 <!-- Sidebar -->
     <aside class="sidebar">
       <div class="side-inner">
@@ -110,6 +26,7 @@
           </div>
         </div>
         <nav class="nav">
+
           <!-- Sections -->
           <a href="#about-section">About</a>
           <a href="#skills">Skills &amp; Interests</a>
@@ -130,7 +47,8 @@
 
 <!-- Main content -->
     <main class="main">
- <!-- Title -->
+
+ <!-- Hero -->
   <section id="hero" class="hero">
         <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=2400&q=80" alt="Rocket launch background"/>
         <div class="hero-inner">
@@ -146,20 +64,24 @@
 
 
  <!-- About Section -->
-  <section id="about-section" class="section">
+    <section id="about-section" class="section">
+    <div class="grid grid-2" >
     <div class="title">
       <div class="iconbox" aria-hidden>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
       </div>
         <div>
-          <h2>About</h2>
+          <h2>About me</h2>
            <p class="subtitle">Who I am and what drives me</p>
         </div>
     </div>
+
       <p style="font-size:18px;line-height:1.7;max-width:800px;margin:auto;color:#334155;">
         I’m an aerospace engineer who loves building things that actually work — whether that’s a SolidWorks model, a new tool, or a full system coming together piece by piece. I’ve spent a lot of time designing mechanical parts and figuring out how to make complex ideas simple and practical. I like projects where I can mix creativity with engineering, and I’m always looking for better, cleaner ways to make ideas real.
       </p>
+    </div>
   </section>
+
 
 
  <!-- Skills & Interests -->
@@ -247,7 +169,7 @@
      <div class="card-h">
       <div style="display:flex;align-items:center;gap:12px;">
        <div class="logo-row"></div>
-       <img src="images/Crew Tool.avif" alt="Crew Tool logo" style="height:75px;width:auto;border-radius:6px;flex-shrink:0;" />
+       <img src="images\Crew Tool.avif" alt="Crew Tool logo" style="height:75px;width:auto;border-radius:6px;flex-shrink:0;" />
          <div>
            <h3 class="card-title" style="margin:0;">Design Engineer · Crew Tool</h3>
             <p class="card-desc" style="margin:0;">Sep 2024 – Sep 2025</p>
@@ -338,7 +260,8 @@
     <div class="grid grid-2" style="margin-bottom: 32px;">
 
   <!-- UCF -->
-  <article class="card reveal">
+   <a href="images\UCF Diploma.pdf" target="_blank">
+  <article class="card reveal select">
    <div class="card-h">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
       <div>
@@ -349,15 +272,16 @@
     </div>
    </div>
     <div class="card-c">
-      <p style="color:#334155;line-height:1.6;">
        <p class="card-desc">Bachelor of Science</p>
        <p class="card-desc">Class of 2024</p>
       </p>
     </div>
   </article>
+  </a>
 
   <!-- MDC -->
-  <article class="card reveal">
+   <a href="images\MDC_Degree.jpg" target="_blank">
+  <article class="card reveal select">
    <div class="card-h">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
       <div>
@@ -367,17 +291,17 @@
         <img src="images\MDC_Logo.png" alt="MDC logo" style="height:50px;width:auto;border-radius:6px;flex-shrink:0;" />
     </div>
    </div>
+    <button class="card-button"> View </button>
     <div class="card-c">
-      <p style="color:#334155;line-height:1.6;">
        <p class="card-desc">Associate of Science</p>
        <p class="card-desc">Class of 2020</p>
       </p>
     </div>
   </article>
-
   </div>
+  </a>
   <div class="grid grid-3">
-
+  
   <!-- SolidWorks Certifications -->
   <article class="card reveal solidworks-card">
    <div class="card-h">
@@ -412,42 +336,6 @@
      </div>
     </div>
   </article>
-   <!-- Style for SolidWorks Card -->
-    <style>
-    .solidworks-card .cert-details 
-    {
-      max-height: 48px; /* enough to show the top of 1 line */
-      opacity: 1; /* keep it visible */
-      overflow: hidden;
-      position: relative;
-      transition: max-height 0.6s ease;
-    }
-
-    /* Fake fade-out to hint more content exists */
-    .solidworks-card .cert-details::after 
-    {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 32px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, white 100%);
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    .solidworks-card:hover .cert-details 
-    {max-height: 300px;}
-    .solidworks-card:hover .cert-details::after 
-    {opacity: 0;}
-    .solidworks-card .list li 
-    {
-      margin: 12px 0;
-      font-size: 14px;
-      line-height: 1.6;
-      color: #0f172a;
-    }
-  </style>
 
   <!-- Six Sigma -->
   <article class="card reveal sixsigma-card">
@@ -499,83 +387,88 @@
 
 
  <!-- Projects -->
- <section id="projects" class="section">
-  <div class="title">
-   <div class="iconbox" aria-hidden>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5L9 12l6-6 3 3-6 6-4.5 4.5L4.5 16.5z"></path><path d="M15 9l3 3"></path></svg>
-   </div>
-    <div>
-     <h2>Projects</h2>
-      <p class="subtitle">Selected work &amp; prototypes</p>
+  <section id="projects" class="section">
+   <div class="title">
+    <div class="iconbox" aria-hidden>
+     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5L9 12l6-6 3 3-6 6-4.5 4.5L4.5 16.5z"></path><path d="M15 9l3 3"></path></svg>
     </div>
-   </div>
-  <div class="grid grid-3">
-
-  <!-- SolidWorks Playground -->
-  <article class="card reveal">
-    <div class="card-h">
-     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-      <div aria-hidden>
-       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10l-6 3-6-3 6-3 6 3z"/><path d="M16 13v8"/><path d="M8 10v8"/><path d="M22 10v8"/><path d="M2 10l6 3v8l-6-3V10z"/></svg>
-      </div>
-       <h3 class="card-title">The Design Desk</h3>
+     <div>
+      <h2>Projects</h2>
+       <p class="subtitle">Selected work &amp; prototypes</p>
      </div>
-      <p class="card-desc">Free, bite‑size CAD practice problems and tutorials for aspiring mechanical designers.</p>
-    </div>
-     <div class="card-c">
-      <div class="badges" style="margin-bottom:16px">
-       <span class="badge">SolidWorks</span>
-       <span class="badge">Design for Manufacturing</span>
-       <span class="badge">YouTube</span>
-      </div>
-       <div style="display: flex; gap: 12px; margin-top: 16px;">
-        <a class="btn secondary" href="https://www.youtube.com/@TheDesignDesk1" target="_blank" rel="noreferrer" style="width:100%;justify-content:center">View Channel</a>
-        <a class="btn secondary" href="https://solidpractice26.wixsite.com/the-design-desk" target="_blank" rel="noreferrer" style="width:100%;justify-content:center">View Website</a>
+   </div>
+
+   <div class="grid grid-3" style="margin-bottom: 32px;">
+
+  <!-- Emergency Insights -->
+   <article class="card reveal">
+    <img src="images/EmergencyGroupPicture.jpg" alt="Emergency Insights Group" class="project-image">
+     <div class="card-h" style="border-bottom: 0">
+      <div aria-hidden>
+       <h3 class="card-title">Emergency Insights</h3>
+       <p class="card-desc">
+        Emergency Insights helps people understand the risks around their homes or communities. 
+        It automatically gathers data about things like floods, storms, and other hazards, then turns it into simple, easy-to-read reports and maps. 
+        The goal is to make safety information more accessible and help people stay prepared.
+       </p>
+        <div class="project-tags">
+         <span class="tag">AWS</span>
+         <span class="tag">Automation</span>
+         <span class="tag">Risk Reports</span>
+         <span class="tag">Mapping</span>
+          <a class="btn secondary" href="https://arefabdala.wixsite.com/emergencyinsight/team-4" target="_blank" rel="noreferrer" style="width:100%;justify-content:center">View Website</a>
+        </div>       
        </div>
-  </article>
+     </div>
+   </article>
+
+  <!-- SolidWorks The Design Desk -->
+   <article class="card">
+    <img src="images\TheDesignDesk.png" alt="The Design Desk Image" class="project-image" style="object-position: 30% 30%">
+     <div class="card-h" style="border-bottom: 0">
+      <h3 class="card-title">The Design Desk</h3>
+       <p class="card-desc">
+        Free, bite-size CAD practice problems and tutorials designed to help aspiring 
+        mechanical designers build real skills. Each challenge focuses on manufacturable geometry, 
+        proper modeling habits, and the kind of decision-making used in real engineering work.
+       </p>
+        <div class="project-tags">
+         <span class="tag">SolidWorks</span>
+         <span class="tag">You Tube</span>
+         <span class="tag">CAD</span>
+         <span class="tag">Practice</span>
+         <span class="tag">Technical Drawing</span>
+         <div style="display: flex; gap: 12px; margin-top: 16px; white-space: nowrap;">
+          <a class="btn secondary" href="https://www.youtube.com/@TheDesignDesk1" target="_blank" rel="noreferrer" style="width:100%;justify-content:center">View Channel</a>
+          <a class="btn secondary" href="https://solidpractice26.wixsite.com/the-design-desk" target="_blank" rel="noreferrer" style="width:100%;justify-content:center">View Website</a>
+         </div>      
+        </div>
+     </div>
+   </article>
 
   <!-- Space Agency Manager UE5 -->
   <article class="card reveal">
-   <div class="card-h">
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-     <div aria-hidden>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94"/><path d="M9.69 8h11.48"/><path d="M7.38 12l5.74-9.94"/><path d="M9.69 16L3.95 6.06"/><path d="M14.31 16H2.83"/><path d="M16.62 12l-5.74 9.94"/></svg>
+   <img src="images\UE5Space.jpg" alt="The Design Desk Image" class="project-image" style="object-position: 86% 50%">
+    <div class="card-h" style="border-bottom: 0">
+     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+      <div aria-hidden></div>
+       <h3 class="card-title">Space Agency Manager (UE5)</h3>
      </div>
-      <h3 class="card-title">Space Agency Manager (UE5)</h3>
-    </div>
-     <p class="card-desc">First‑person management sim: hire teams, build rockets, and lead mission control launches.</p>
-   </div>
-    <div class="card-c">
-     <div class="badges" style="margin-bottom:16px">
-      <span class="badge">Unreal Engine 5</span>
-      <span class="badge">Blueprints</span>
-      <span class="badge">C++</span>
-     </div>
-      <a class="btn secondary" href="images\Game_Design_Document P02.pdf" target="_blank" rel="noreferrer" style="width:100%;justify-content:center">GDD Notes</a>
-    </div>
-  </article>
-
-  <!-- Emergency Insights -->
-  <article class="card reveal">
-   <div class="card-h">
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-     <div aria-hidden>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"></path><path d="M9 17h6"></path><path d="M12 3v4"></path></svg>
-     </div>
-      <h3 class="card-title">Emergency Insights</h3>
-    </div>
-     <p class="card-desc">County‑level hazard risk assessments with automated PDF reports and dashboards.</p>
-   </div>
-    <div class="card-c">
-     <div class="badges" style="margin-bottom:16px">
-      <span class="badge">AWS</span>
-      <span class="badge">Data Viz</span>
-      <span class="badge">SSRS</span>
-     </div>
-      <a class="btn secondary" href="https://arefabdala.wixsite.com/emergencyinsight/team-4" target="_blank" rel="noreferrer" style="width:100%;justify-content:center">View Website</a>
+      <p class="card-desc">
+       a first-person management sim built in Unreal Engine 5 where you hire teams, 
+       build rockets, and run high-stakes launch operations from mission control. Plan budgets and staffing, assemble a vehicle, 
+       then handle real-time issues during countdowns with quick, command-style decisions. 
+      </p>
+       <div class="project-tags">
+        <span class="tag">Blueprints</span>
+        <span class="tag">Unreal Engine 5</span>
+        <span class="tag">C++</span>
+        <span class="tag">Mapping</span>
+        <a class="btn secondary" href="images\Game_Design_Document P02.pdf" target="_blank" rel="noreferrer" style="width:100%;justify-content:center" style="width:100%;justify-content:center">GDD Notes</a>
+       </div>
     </div>
   </article>
-  </div>
+   </div>
   </section>
 
  <!-- Extra Curricular 

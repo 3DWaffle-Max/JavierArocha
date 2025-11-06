@@ -1,0 +1,43 @@
+# Release Notes – [Project Name / Site Name]  
+**Version:** [X.Y.Z]  
+**Release Date:** [YYYY-MM-DD]  
+**Branch:** [main / feature-name]  
+
+## Summary  
+[Brief overview of the update — highlight major changes, focus on clarity. What’s new, improved, or fixed?]
+
+---
+
+## New Features  
+- [Feature 1] – [Short description of what was added]  
+- [Feature 2] – [Short description of what was added]
+
+---
+
+## Improvements & Changes  
+- [Improvement 1] – [Short description of enhancement or change]  
+- [Improvement 2] – [Short description of enhancement or change]
+
+---
+
+## Bug Fixes  
+- [Bug 1] – [Brief description of what was fixed]  
+- [Bug 2] – [Brief description of what was fixed]
+
+---
+
+## Known Issues  
+- **[Issue description]** – [Optional: workaround or current status]  
+- **[Issue description]** – [Optional: status or fix in progress]
+
+---
+
+## Next Steps & Roadmap  
+- **Next Priority 1:** [Brief description]  
+- **Next Priority 2:** [Brief description]
+
+---
+
+## Development Notes  
+[Optional section for personal reflections, ideas, tech insights, or decisions for future updates.]
+

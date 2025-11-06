@@ -1,0 +1,95 @@
+# JavierArocha.me — Build Log & Vision Guide
+
+## [v0.0.1] — Project Kickoff  
+**Status:** Completed  
+
+### Goals  
+Create the first draft for the website and buy the domain.
+
+### Tasks  
+- [X] Create first draft of the website  
+- [X] Create a github page to host the website  
+- [X] Populate the website on Visual Studio  
+- [X] Buy a domain on Square Space  
+- [X] Link the domain to the github page 
+- [X] Link the github website to the github desktop to upload changes easier  
+
+## [v0.0.2] — Design Modifications  
+ **Status:** Completed 
+
+### Goals  
+- Establish tone and design direction  
+- Define structure and core pages  
+- Generate initial layout via AI builder  
+
+### Tasks   
+- [X] Defined visual style: futuristic + minimal  
+- [X] Identified target audience: recruiters and engineering professionals  
+- [X] Core sections outlined:  
+- [X] About  
+- [X] Skills & Interests  
+- [X] Experience  
+- [X] Awards & Recognitions  
+- [X] Projects  
+- [X] Contact  
+- [X] Generated starter template with fixed side navigation  
+- [X] Replaced logo with clean name-based branding  
+- [X] Set brand tone: clarity, curiosity, effort-driven
+
+## [v0.0.3] — Design change for first impressions  
+ **Status:** In Progress 
+
+### Goals  
+- Deside design styles for sections  
+- Define structure and core pages   
+
+### Tasks   
+- [X] Hero (design change)  
+- [X] About (Design change)
+
+---
+
+## [v0.0.0] — Content Drop  
+**Status:** Planned  
+
+### Goals  
+Populate site with real content from resume and personal background.
+
+### Tasks  
+- [ ] Write "About Me" section (focus on personality, effort, curiosity)  
+- [ ] List out technical skills, tools, and interests  
+- [ ] Choose 3–5 featured projects (CAD, uni, personal builds, etc.)  
+- [ ] Write 2–4 sentence blurbs for each project (challenge → what you did → result)  
+- [ ] Add awards and recognitions (resume content or expanded)  
+- [ ] Fill in experience section with bullet points from resume  
+
+---
+
+## [v0.0.0] — Visual Enhancements  
+**Status:** Locked (will begin after core content is added)  
+
+### Goals  
+Enhance visual appeal and personalize the look and feel of the site.
+
+### Tasks  
+- [ ] Upload project images (optimize for web)  
+- [ ] Add professional photo or avatar  
+- [ ] Finalize color palette (futuristic, readable, professional)  
+- [ ] Customize typography and spacing  
+- [ ] Insert diagrams, icons, or graphics where relevant  
+
+---
+
+## [v0.0.0] — Public Launch  
+**Status:** Planned  
+
+### Goals  
+Make the site ready for public sharing with recruiters and on platforms.
+
+### Tasks  
+- [ ] Test mobile and desktop responsiveness  
+- [ ] Validate contact form and check external links  
+- [ ] Proofread all written content  
+- [ ] Ask a peer or mentor for feedback  
+- [ ] Publish live version  
+- [ ] Add to resume, email signature, LinkedIn, GitHub, etc.  
