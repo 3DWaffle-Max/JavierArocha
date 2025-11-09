@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Javier Arocha • Portfolio</title>
   <meta name="description" content="Aerospace & Mechanical Engineer portfolio — projects, skills, experience, awards, and contact."/>
+  <meta name="author" content="Javier Arocha">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets\css\style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+
 <body>
   <div class="layout">
 
-<!-- Sidebar -->
+<!-- #region Sidebar -->
     <aside class="sidebar">
       <div class="side-inner">
         <div class="side-brand">
@@ -28,7 +31,9 @@
         </div>
         <nav class="nav">
 
-          <!-- Sections -->
+
+
+  <!-- Sections -->
           <a href="#about-section">About</a>
           <a href="#skills">Skills &amp; Interests</a>
           <a href="#experience">Experience</a>
@@ -44,17 +49,18 @@
       </div>
       <div class="side-footer">© <span id="year"></span> Javier Arocha</div>
 </aside>
+<!-- #endregion -->
 
 
 <!-- Main content -->
     <main class="main">
 
- <!-- Hero -->
+ <!-- #region Hero -->
       
 <section id="hero" class="hero">
   <div class="hero-container">
     <div id="hero-wrapper">
-    <div class="layout-grid hero-grid">
+    <div class="hero-grid">
       <!-- LEFT COLUMN -->
       <div class="hero-grid-left">
         <div class="hero-name-wrapper">
@@ -109,33 +115,32 @@
     </div>
   </div>
 </section>
+ <!-- #endregion -->
 
-
- <!-- About Section -->
+ <!-- #region About Section -->
     <section id="about-section" class="section">
-    <div class="grid grid-2" >
-    <div class="title">
-        <div>
-        <div>
+     <div id="About-Section">
+    <div class="grid-about" >
+      <div>
+    <div class="about-left-title">
         <div class="iconbox" aria-hidden>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      </div>
-
-          <h2>About me</h2>
-           <p class="subtitle">Who I am and what drives me</p>        
-           </div>
-      <p style="font-size:18px;line-height:1.7;max-width:800px;margin:auto;color:#334155;">
-        I’m an aerospace engineer who loves building things that actually work — whether that’s a SolidWorks model, a new tool, or a full system coming together piece by piece. I’ve spent a lot of time designing mechanical parts and figuring out how to make complex ideas simple and practical. I like projects where I can mix creativity with engineering, and I’m always looking for better, cleaner ways to make ideas real.
-      </p>
-      </div>
        </div>
-      <div class="grid-about">
+       <div>
+          <h2>About me <p class="subtitle">Who I am and what drives me</p> </h2>
+        </div>
+        </div>
+      <p style="font-size:18px;line-height:1.7;max-width:800px;margin:auto;color:#334155; margin-left: 12%;">
+        I’m an aerospace engineer with a strong interest in practical mechanical design. I like taking ideas from concept to something tangible. My work revolves around understanding how things fit together, optimizing designs for real-world use, and finding clean, efficient solutions to engineering problems.I’m always looking for ways to make designs simpler, stronger, and easier to build.
+      </p>     
+            </div>
+      <div class="grid-square">
         <div class="grid-area">
           <h3>4</h3>
           <p>Years of experience</p>
         </div>
                 <div class="grid-area">
-          <h3>4</h3>
+          <h3>3</h3>
           <p>CAD Softwares</p>
         </div>
                 <div class="grid-area">
@@ -149,15 +154,45 @@
       </div>
 
 
-
+  </div>
     </div>
   </section>
+  <h1 style="margin: 0 0 25px 0; text-align: center;">Things I'm good at</h1>
+  <section class="full-width-band">
+    <div class="band-components">
+      <img src=images\SolidWorks-logo.png alt="SolidWorks_Logo">
+      <h2>SolidWorks</h2>
+      </div>
+      <div class="band-components">
+              <img src=images\autocad-logo.png alt="AutoCad_Logo">
+        <h2>AutoCAD</h2>
+ </div>
+       <div class="band-components">
+              <img src=images\Fusion360_Logo.svg.png alt="Fusion360_Logo">
+        <h2>Fusion360</h2>
+ </div>
+ <div class="band-components">
+              <img src=images/ue5_logo.webp alt="unreal_engine_Logo">
+        <h2>UnrealEngine</h2>
+ </div>
+ 
+ 
+  </section>
 
-  
+ <!--
+      <div class="bar-components">
+        <h2>Logo Here</h2>
+        <span>Text Here</span>
+      </div>
+      <div class="bar-components">
+        <h2>Logo Here</h2>
+        <span>Text Here</span>
+        -->
 
 
+  <!-- #endregion -->
 
- <!-- Skills & Interests -->
+ <!-- #region Skills & Interests -->
   <section id="skills" class="section">
         <div class="title">
           <div class="iconbox" aria-hidden>
@@ -221,9 +256,9 @@
     </article>
    </div>
   </section>
+ <!-- #endregion -->
 
-
- <!-- Experience -->
+ <!-- #region Experience -->
   <section id="experience" class="section">
     <div class="title">
       <div class="iconbox" aria-hidden>
@@ -316,9 +351,9 @@
     </div>
   </article>
  </section>
+ <!-- #endregion -->
 
-
- <!-- Awards -->
+ <!-- #region Awards -->
  <section id="awards" class="section">
   <div class="title">
     <div class="iconbox" aria-hidden>
@@ -457,9 +492,9 @@
   </article>
   </div>
  </section>
+<!-- #endregion -->
 
-
- <!-- Projects -->
+ <!-- #region Projects -->
   <section id="projects" class="section">
    <div class="title">
     <div class="iconbox" aria-hidden>
@@ -543,7 +578,9 @@
   </article>
    </div>
   </section>
+<!-- #endregion -->
 
+<!-- #region Extra-->
  <!-- Extra Curricular 
       <section id="extra" class="section">
         <div class="title">
@@ -581,9 +618,9 @@
         </div>
       </section>
  -->
-      
+      <!-- #endregion -->
 
- <!-- Contact -->
+ <!-- #region Contact-->     
  <section id="contact" class="section" style="max-width:960px">
   <div class="title">
    <div class="iconbox" aria-hidden>
@@ -780,6 +817,7 @@
       margin-bottom: 40px;
     }
   </style>
+
    <body>
     <div class="demo-container">
       <div class="tooltip-examples">
@@ -836,8 +874,9 @@
   </section>
   </div>  
  <section>
+  <!-- #endregion -->
 
-
+ <!-- #region Footer-->
   <script>
     // year in footer
     const y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
@@ -857,7 +896,7 @@
       })
     });
   </script>
-
+ <!-- #endregion -->
 </div>
 </body>
 </html>
