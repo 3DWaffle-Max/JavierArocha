@@ -471,5 +471,31 @@ object-fit: contain;
 }
 .info-card p {
     text-wrap: auto;
-
 }
+
+/* About Section*/
+#about-section-overlay {
+  border-image: 
+  linear-gradient(
+    hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8))
+    fill 1;
+}
+
+#about-section {
+  background-image: url(../../images/INT-IEC-01.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  place-content: center;
+  background-attachment: fixed;
+  background-position:top center;
+  color: white;
+  
+}
+
+/* #about-section-overlay {
+  border-image: 
+  linear-gradient(
+    hsl(240 100% 50% / .3), hsl(0 100% 50% / .3))
+    fill 1;
+}
+    */
