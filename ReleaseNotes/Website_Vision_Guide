@@ -51,22 +51,26 @@ Create the first draft for the website and buy the domain.
 ---
 
 ## [v0.0.4] — Content Drop  
-**Status:** Planned  
+**Status:** In progress  
 
 ### Goals  
 Populate site with real content from resume and personal background.
 
 ### Tasks  
-- [ ] Write "About Me" section (focus on personality, effort, curiosity)  
-- [ ] List out technical skills, tools, and interests  
-- [ ] Choose 3–5 featured projects (CAD, uni, personal builds, etc.)  
-- [ ] Write 2–4 sentence blurbs for each project (challenge → what you did → result)  
-- [ ] Add awards and recognitions (resume content or expanded)  
-- [ ] Fill in experience section with bullet points from resume  
+- [X] Write "About Me" section (focus on personality, effort, curiosity)  
+- [X] List out technical skills, tools, and interests  
+- [X] Choose 3–5 featured projects (CAD, uni, personal builds, etc.)  
+- [X] Write 2–4 sentence blurbs for each project (challenge → what you did → result)  
+- [X] Add awards and recognitions (resume content or expanded)  
+- [X] Fill in experience section with bullet points from resume 
+- [ ] Decide the layout of the Experience Section
+
+### To do
+- I need to take a profesional picture.
 
 ---
 
-## [v0.0.0] — Visual Enhancements  
+## [v0.0.5] — Visual Enhancements  
 **Status:** Locked (will begin after core content is added)  
 
 ### Goals  
