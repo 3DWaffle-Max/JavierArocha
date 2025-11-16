@@ -1,0 +1,49 @@
+/* Crewtool-Specific Styles */
+
+.content-grid {
+  display: grid;
+  gap: 48px;
+  margin-bottom: 48px;
+  grid-template-columns: 1fr; /* Mobile: 1 column */
+}
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr 1fr; /* Desktop: 2 columns */
+  }
+}
+/* Image Container */
+.image-container {
+  background: white;
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.second-container {
+  border-radius: var(--radius);
+  border: 2px solid #e2e8f0;
+  overflow: hidden;
+}
+
+/* Special styling for technical drawings */
+.image-container .technical-drawing {
+   transform: scale(1.2);
+  object-position: 35% top;
+  min-height: 600px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+}
