@@ -525,7 +525,7 @@ object-fit: contain;
   margin: 0;
   color: white;
 }
-#exp-hov 
+.exp-hov
 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -533,10 +533,10 @@ object-fit: contain;
   transform-origin: center;
   background: linear-gradient(to top, #0a3394, #4286f4)
 }
-#exp-hov:hover {
+.exp-hov:hover {
  transform: scale(1.03);
 }
-#exp-hov:hover .see-more {
+.exp-hov:hover .see-more {
   transform: translateX(-2%);
 }
 /*#endregion*/
